@@ -35,8 +35,7 @@
                     @endauth
                 </div>
             @endif
-            <img src="https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-preview.jpg" width=100% />
-            <h3>글자</h3>
+            <img src="{{URL::asset('/images/aa.png')}}" width="100%" />
         </div>
 
     </body>

@@ -33,8 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <a class="nav-link" href="{{ url('/home') }}">메인</a>
-                        <a class="nav-link" href="{{ url('/upload') }}">업로드</a>
-
+                    <a class="nav-link" href="{{ url('/upload') }}">업로드</a>
+                    <a class="nav-link" href="{{ url('/view') }}">관리자</a>
+                    <a class="nav-link" href="{{ url('/view') }}">사이트 소개</a>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -77,6 +78,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+
+
     </div>
 </body>
 </html>

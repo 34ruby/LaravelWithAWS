@@ -30,5 +30,6 @@ Route::get('/home', [HomeController::class, 'index'])->middleware(['auth']);;
 
 Route::get('/view', [ViewController::class, "index"])->middleware(['auth']);;
 
+
 // Route::get('/upload', [UploadController::class, 'index']);
 // Route::post('/upload', [UploadController::class, 'store']);
