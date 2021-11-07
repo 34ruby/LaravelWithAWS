@@ -51,6 +51,13 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+
+            // 'cache' => [
+            //     'store' => 'memcached',
+            //     'expire' => 600,
+            //     'prefix' => 'cache-prefix',
+            // ],
+
         ],
 
     ],

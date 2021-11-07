@@ -32,9 +32,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    <a class="nav-link" href="{{ url('/home') }}">메인</a>
+                        <a class="nav-link" href="{{ url('/upload') }}">업로드</a>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

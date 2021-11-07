@@ -38,6 +38,7 @@ class UploadController extends Controller
             'test1', 's3'
         );
         return $path;
+
     }
 
     /**
