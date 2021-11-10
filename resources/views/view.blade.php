@@ -7,16 +7,40 @@
 
     <div class="row justify-content-center">
 
-        <div class="col-md-8">
+        <div class="col-md-12">
             <img id="output" />
             <div class="card">
 
                 <div class="card-body">
-                    <H3>안녕</H3>
-                    <p>만들계획</p>
-                    <p>이미지 세부 정보 보는 페이지, 관리자 전용 이미지 게시판</p>
-                    <p>해당 유저가 좋아요 누른 게시물 목록 불러오기</p>
-                    <p>관리자에게 문의할 수 있는 페이지로 가기</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Tags</th>
+                            <th scope="col">upload</th>
+                            <th scope="col">setting</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark, Mark, Mark, Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>

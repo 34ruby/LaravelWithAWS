@@ -35,6 +35,7 @@
                     <a class="nav-link" href="{{ url('/home') }}">메인</a>
                     <a class="nav-link" href="{{ url('/upload') }}">업로드</a>
                     <a class="nav-link" href="{{ url('/view') }}">관리자</a>
+                    <a class="nav-link" href="{{ url('/view') }}">문의하기</a>
                     <a class="nav-link" href="{{ url('/view') }}">사이트 소개</a>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
