@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\Upload;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
-class UploadController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,11 @@ class UploadController extends Controller
      */
     public function index()
     {
-        return view('upload');
+        $posts = Post::all();
+
+        // dd($posts);
+
+        return view('cc.index', ['posts'=>$posts]);
     }
 
     /**
@@ -27,7 +28,7 @@ class UploadController extends Controller
      */
     public function create()
     {
-        return view('uploads.create');
+        //
     }
 
     /**
@@ -38,27 +39,7 @@ class UploadController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('file')->store(
-            'test1', 's3'
-        );
-
-        Storage::disk('s3')->setVisibility($path, 'public');
-
-        $image = Upload::create([
-            'filename' => basename($path),
-            'url' => Storage::disk('s3')->url($path),
-            'title' => 'ruby',
-            'user_id' => Auth::user()->id,
-        ]);
-        // $this->validate([
-        //     'filename' => 'required',
-        //     'url'=> 'required',
-        //     'title' => 'required|1',
-        //     ''
-        // ]);
-
-        return $image;
-
+        //
     }
 
     /**
@@ -67,10 +48,9 @@ class UploadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Upload $image)
+    public function show($id)
     {
-        // return $image;
-        return $image->url;
+        //
     }
 
     /**

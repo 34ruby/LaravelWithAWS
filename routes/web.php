@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageFileController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +24,10 @@ Route::get('/', function () {
 });
 
 Route::resource('/upload', UploadController::class)->middleware(['auth']);;
+// Route::get('/upload/create', UploadController::class, 'create')->middleware(['auth']);;
+// Route::get('/upload', UploadController::class, 'index')->middleware(['auth']);;
+// Route::post('/upload/store', UploadController::class, 'store')->middleware(['auth']);;
+// Route::get('/upload/{upload}', UploadController::class, 'show')->middleware(['auth']);;
 
 
 Auth::routes();
@@ -31,5 +37,9 @@ Route::get('/home', [HomeController::class, 'index'])->middleware(['auth']);;
 Route::get('/view', [ViewController::class, "index"])->middleware(['auth']);;
 
 
+Route::resource('/posts', PostsController::class)->middleware(['auth']);;
+
+
 // Route::get('/upload', [UploadController::class, 'index']);
 // Route::post('/upload', [UploadController::class, 'store']);
+
