@@ -11,7 +11,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/flex-images.js') }}"></script>
+
+    <script src="{{ asset('js/jquery-2.1.4.js') }}"></script>
+    <script src="{{ asset('js/jquery.flex-images.js') }}"></script>
+    <script src="{{ asset('js/jquery.watermark.min.js') }}"></script>
     {{-- <link href="{{ asset('css/update.css') }}" rel="stylesheet"> --}}
 
 
@@ -23,10 +26,10 @@
     <link rel="shortcut icon" href="{{URL::asset('/images/favicon.ico')}}" type="image/x-icon">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/flex-images.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.flex-images.css') }}" rel="stylesheet">
     {{-- Self Design --}}
-    <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">
-
+    {{-- <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css"> --}}
+    {{-- <link rel="stylesheet" href="jquery.flex-images.css"> --}}
 
 </head>
 <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
@@ -102,14 +105,10 @@
             </div>
         </nav>
 
-
-
         <div id="fb-root"></div>
 
-
         <script>
-            new flexImages({selector: '#demo1', rowHeight: 140});
-
+            // new flexImages({selector: '#demo1', rowHeight: 140});
 
 
         </script>

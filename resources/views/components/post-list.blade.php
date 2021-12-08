@@ -12,11 +12,11 @@
                             <th scope="col" colspan="3">Setting</th>
                           </tr>
                         </thead>
-                        @foreach ($posts as $post)
+                        @foreach ($uploads as $upload)
                         <tbody>
                           <tr>
-                            <th scope="row">{{ $post->id }}</th>
-                            <td>{{ $post->title }}</td>
+                            <th scope="row">{{ $upload->id }}</th>
+                            <td>{{ $upload->title }}</td>
                             <td>
                                 <div class="svg_view">
                                     <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24">

@@ -10,7 +10,8 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Image Upload Table') }}</div>
-
+                <a href="https://34rubybucket02.s3.ap-northeast-2.amazonaws.com/test1/b0iO9uoYOmSyOvOEq3xYr6FU6ffftjK5eGq7aiut.jpg">d</a>
+                {{-- {{ $image->title }} --}}
                 <div class="card-body">
                     <div class="input-group mb-3">
                     <label>Image Title</label>
@@ -52,8 +53,6 @@
 
         var output = document.getElementById('output');
         output.src = URL.createObjectURL(event.target.files[0]);
-
-
     }
 </script>
 

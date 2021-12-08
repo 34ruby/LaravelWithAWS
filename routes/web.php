@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageFileController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\TabsController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Auth;
@@ -34,11 +35,11 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->middleware(['auth']);;
 
-Route::get('/view', [ViewController::class, "index"])->middleware(['auth']);;
+Route::get('/view', [ViewController::class, "index"])->middleware(['auth', 'cors']);;
 
 
 Route::resource('/posts', PostsController::class)->middleware(['auth']);;
-
+// Route::resource('/tabs', TabsController::class)->middleware(['auth']);;
 
 // Route::get('/upload', [UploadController::class, 'index']);
 // Route::post('/upload', [UploadController::class, 'store']);

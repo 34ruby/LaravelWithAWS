@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Upload;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -14,11 +16,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $uploads = Upload::all();
 
         // dd($posts);
 
-        return view('cc.index', ['posts'=>$posts]);
+        return view('cc.index', ['uploads'=>$uploads]);
     }
 
     /**
@@ -28,7 +30,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('cc.create');
     }
 
     /**
@@ -39,7 +41,17 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+                // Post::create($request);
+                $this->validate($request, [
+                    'title'=>'required',
+
+                ]);
+
+                // return view(route('posts.index'), ['posts'=>Post::all()]);
+                $input = array_merge($request->all(), ["user_id"=>Auth::user()->id]);
+                Upload::create($input);
+                // return view('bbs.index', ['posts'=>Post::all()]);
+                return redirect()->route('upload.index');
     }
 
     /**

@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="card-body">
-                    <x-post-list :posts="$posts" />
+                    <x-post-list :posts="$uploads" />
                 </div>
             </div>
         </div>
